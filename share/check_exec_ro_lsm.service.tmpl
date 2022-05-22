@@ -1,0 +1,10 @@
+[Unit]
+Description=LSM BPF protection for argc == 0 execs
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=DESTDIR/sbin/load_check_exec_ro_lsm
+
+[Install]
+WantedBy=multi-user.target
